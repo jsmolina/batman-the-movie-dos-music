@@ -64,3 +64,4 @@ Loader is 1226 bytes plus a 100 KB track buffer (MENU.WLF is the largest at
 96 KB), shrunk to 101.5 KB with INT 21h AH=4Ah before EXEC. The game needs
 149 KB minimum and has maxalloc 0xFFFF, so it takes everything left.
 
+Credits to spark for the adlib music.
