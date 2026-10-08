@@ -36,12 +36,6 @@ Four bytes per record: `u8 opl_register, u8 value, u16 delay_ticks`, at 700 Hz.
 Tracks loop from the start; the preamble is an OPL2 reset (reg 01 = 20 for wave
 select enable, reg 04 = 60 then 80).
 
-Three tracks ship as both `.WLF` and `.VGM`. Summing WLF delays against the VGM
-header sample counts gives 700.0 Hz on all three, which is how the rate was
-determined. `check_wlf.py` simulates the player's tick loop and asserts the
-durations still match:
-
-    python3 check_wlf.py
 
 ## Trigger table
 
