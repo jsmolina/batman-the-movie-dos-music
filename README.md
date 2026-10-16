@@ -17,8 +17,7 @@ timer and interrupt vectors on exit.
 
 The executable hooks INT 1Ch (installer at image offset 0x08) and INT 9 (ISR at
 0x5fa), and never touches INT 8h or PIT channel 0. The `out 43h/42h/61h` at
-0xf8e6 is PC speaker only. There is no reference to ports 388h/389h anywhere, so
-the game has no AdLib code at all.
+0xf8e6 is PC speaker only. The original game was very limited in music.
 
 That leaves INT 8h free. BATMUS reprograms PIT channel 0 to 700 Hz (divisor
 1704) and plays one WLF tick per interrupt. It chains to the original INT 8h
